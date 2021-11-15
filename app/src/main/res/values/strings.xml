@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meditation</string>
+    <string name="botregtint">Ещё нет аккаунта? <b>Зарегестрируйтесь</b></string>
+    <string name="title_activity_main_home">MainHome</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
