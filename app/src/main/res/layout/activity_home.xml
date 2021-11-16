@@ -3,36 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="#253334"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent"
+    tools:context=".home">
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="301dp"
-        android:layout_height="203dp"
-        android:src="@drawable/logaaa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/hamburger"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998" />
-
-    <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ellipse"
@@ -44,7 +20,34 @@
         app:layout_constraintVertical_bias="0.06999999" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="Каким ты ощущаешь себя сегодня?"
+        android:textColor="#B3FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/hamburger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <TextView
+        android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya"
@@ -58,20 +61,117 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.145" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/alegreya_sans"
-        android:text="Каким ты ощущаешь себя сегодня?"
-        android:textColor="#B3FFFFFF"
-        android:textSize="20dp"
+    <FrameLayout
+        android:layout_width="385dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/crugbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="226dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            android:src="@drawable/kart2" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/alegreya"
+            android:text="Заголовок Блока"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="66dp"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="Кратенькое описание блока с двумя строчками"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/btnbgblack"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="подробнее"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="385dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/crugbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="196dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            android:src="@drawable/kart1" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/alegreya"
+            android:text="Заголовок Блока"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="66dp"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="Кратенькое описание блока с двумя строчками"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/btnbgblack"
+            android:fontFamily="@font/alegreya_sans"
+            android:text="подробнее"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -138,115 +238,15 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="385dp"
-        android:layout_height="206dp"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/crugbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
-
-        <ImageButton
-            android:id="@+id/imageButton12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="196dp"
-            android:layout_marginTop="100dp"
-            android:background="@color/white"
-            android:src="@drawable/kart1" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/alegreya"
-            android:text="Заголовок Блока"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="217dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="66dp"
-            android:fontFamily="@font/alegreya_sans"
-            android:text="Кратенькое описание блока с двумя строчками"
-            android:textColor="@color/black"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="140dp"
-            android:background="@drawable/btnbgblack"
-            android:fontFamily="@font/alegreya_sans"
-            android:text="подробнее"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="385dp"
-        android:layout_height="228dp"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/crugbtn"
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="301dp"
+        android:layout_height="203dp"
+        android:src="@drawable/logaaa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
-        <ImageButton
-            android:id="@+id/imageButton13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="226dp"
-            android:layout_marginTop="100dp"
-            android:background="@color/white"
-            android:src="@drawable/kart2" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/alegreya"
-            android:text="Заголовок Блока"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="217dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="66dp"
-            android:fontFamily="@font/alegreya_sans"
-            android:text="Кратенькое описание блока с двумя строчками"
-            android:textColor="@color/black"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="140dp"
-            android:background="@drawable/btnbgblack"
-            android:fontFamily="@font/alegreya_sans"
-            android:text="подробнее"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

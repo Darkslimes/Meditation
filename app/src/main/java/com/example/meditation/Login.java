@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
         finish();
     }
     public void SignIn(View view){
-        Intent i = new Intent(getApplicationContext(), MainHome.class);
+        Intent i = new Intent(getApplicationContext(), home.class);
         startActivity(i);
         finish();
     }
