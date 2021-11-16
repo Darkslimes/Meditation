@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/Grouptest" />
+        app:srcCompat="@drawable/grouptest" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.056"
-        app:srcCompat="@drawable/Logomini" />
+        app:srcCompat="@drawable/logomini" />
 
     <TextView
         android:id="@+id/textView6"
@@ -84,6 +84,7 @@
         android:layout_marginTop="492dp"
         android:background="@drawable/btnbg"
         android:fontFamily="@font/alegreya_sans_medium"
+        android:onClick="SignIn"
         android:text="Sign in"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -118,6 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya_sans_medium"
+        android:onClick="reg"
         android:text="Register"
         android:textColor="@color/white"
         android:textSize="17dp"

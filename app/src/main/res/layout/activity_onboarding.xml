@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/Logobg"
     android:layout_height="match_parent"
+    android:background="@drawable/Logobg"
     tools:context=".Onboarding">
 
     <ImageView
@@ -83,6 +83,7 @@
         android:layout_height="61dp"
         android:background="#7C9A92"
         android:fontFamily="@font/alegreya_sans_medium"
+        android:onClick="OnClick"
         android:text="Войти в аккаунт"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -99,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya"
+        android:onClick="reg"
         android:text="@string/botregtint"
         android:textColor="@color/white"
         android:textSize="16dp"

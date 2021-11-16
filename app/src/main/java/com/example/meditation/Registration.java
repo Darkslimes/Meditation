@@ -4,22 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
-public class Onboarding extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_onboarding);
+        setContentView(R.layout.activity_registration);
     }
-    public void OnClick(View view){
+    public void Onclick(View view){
         Intent i = new Intent(getApplicationContext(), Login.class);
-        startActivity(i);
-        finish();
-    }
-    public void reg(View view){
-        Intent i = new Intent(getApplicationContext(), Registration.class);
         startActivity(i);
         finish();
     }

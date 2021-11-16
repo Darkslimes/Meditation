@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Meditation">
         <activity
+            android:name=".Registration"
+            android:exported="true" />
+        <activity
             android:name=".MainHome"
             android:exported="true"
             android:label="@string/title_activity_main_home" />
