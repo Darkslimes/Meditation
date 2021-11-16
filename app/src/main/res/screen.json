@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "Спокойным",
+      "position": 2,
+      "image": "http://mskko2021.mad.hakta.pro/uploads/feeling/calm%20(4).png"
+    },
+    {
+      "id": 2,
+      "title": "Расслабленным",
+      "position": 1,
+      "image": "http://mskko2021.mad.hakta.pro/uploads/feeling/Relax.png"
+    },
+    {
+      "id": 3,
+      "title": "Сосредоточенным",
+      "position": 3,
+      "image": "http://mskko2021.mad.hakta.pro/uploads/feeling/Focus.png"
+    },
+    {
+      "id": 4,
+      "title": "Уставшим",
+      "position": 4,
+      "image": "http://mskko2021.mad.hakta.pro/uploads/feeling/Focus.png"
+    },
+    {
+      "id": 5,
+      "title": "Радостным",
+      "position": 5,
+      "image": "http://mskko2021.mad.hakta.pro/uploads/feeling/calm%20(4).png"
+    }
+  ]
+}
