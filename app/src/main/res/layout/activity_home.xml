@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#253334"
     android:layout_height="match_parent"
+    android:background="#253334"
     tools:context=".home">
 
     <ImageView
@@ -175,66 +175,58 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="425dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="164dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:paddingTop="10dp"
-            android:textAlignment="center">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="80dp"
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/osh" />
 
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#253334"
-                android:src="@drawable/calmmood" />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/osh" />
 
-            <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#253334"
-                android:paddingLeft="25dp"
-                android:src="@drawable/relaxmood" />
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/osh" />
 
-            <ImageButton
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#253334"
-                android:paddingLeft="25dp"
-                android:src="@drawable/focusmood" />
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/osh"/>
 
-            <ImageButton
-                android:id="@+id/imageButton10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#253334"
-                android:paddingLeft="25dp"
-                android:src="@drawable/anxious" />
-
-            <ImageButton
-                android:id="@+id/imageButton11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#253334"
-                android:paddingLeft="25dp"
-                android:src="@drawable/anxious" />
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_weight="20"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/osh" />
         </LinearLayout>
     </HorizontalScrollView>
 
