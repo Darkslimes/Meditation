@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -26,8 +29,27 @@ public class Login extends AppCompatActivity {
     class POST extends AsyncTask<URL, Void, String> {
         @Override
         protected void onPostExecute(String s) {
+            String id = null;
+            String nickName = null;
+            String token = null;
+            String avatar = null;
+            String email = null;
+            try {
+                JSONObject jsonObject = new JSONObject(s);
+               id= jsonObject.getString("id");
+               nickName= jsonObject.getString("nickName");
+               token= jsonObject.getString("token");
+               avatar= jsonObject.getString("avatar");
+               email= jsonObject.getString("email");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             TextView textView = findViewById(R.id.textView6);
-            textView.setText(s);
+            textView.setText(id);
+            textView.append(nickName);
+            textView.append(token);
+            textView.append(avatar);
+            textView.append(email);
         }
 
         @Override
@@ -40,6 +62,7 @@ public class Login extends AppCompatActivity {
                 urlConnection.setDoOutput(true);
                 urlConnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
                 urlConnection.connect();
+
                 try (OutputStream os = urlConnection.getOutputStream()) {
                     if (email.getText().toString().equals("wsr") && password.getText().toString().equals("wsr")) {
                         byte[] out = "{\"email\":\"wsr\",\"password\":\"wsr\"}".getBytes(StandardCharsets.UTF_8);
