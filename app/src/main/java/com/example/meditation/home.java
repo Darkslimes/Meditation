@@ -20,11 +20,12 @@ import java.util.Scanner;
 
 
 public class home extends AppCompatActivity {
-private  AsyncTask<String,Void,Bitmap> img1;
-private  AsyncTask<String,Void,Bitmap> img2;
-private  AsyncTask<String,Void,Bitmap> img3;
-private  AsyncTask<String,Void,Bitmap> img4;
-private  AsyncTask<String,Void,Bitmap> img5;
+    private AsyncTask<String, Void, Bitmap> img1;
+    private AsyncTask<String, Void, Bitmap> img2;
+    private AsyncTask<String, Void, Bitmap> img3;
+    private AsyncTask<String, Void, Bitmap> img4;
+    private AsyncTask<String, Void, Bitmap> img5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

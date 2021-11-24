@@ -1,42 +1,85 @@
 package com.example.meditation;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
 
 public class Login extends AppCompatActivity {
-    String url = "http://demo-wsr2.herokuapp.com/";
-    String charset = "UTF-8";
-    String param1 = "value1";
-    String param2 = "value2";
+    EditText email, password;
 
+    class POST extends AsyncTask<URL, Void, String> {
+        @Override
+        protected void onPostExecute(String s) {
+            TextView textView = findViewById(R.id.textView6);
+            textView.setText(s);
+        }
+
+        @Override
+        protected String doInBackground(URL... urls) {
+            HttpURLConnection urlConnection = null;
+
+            try {
+                urlConnection = (HttpURLConnection) urls[0].openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setDoOutput(true);
+                urlConnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+                urlConnection.connect();
+                try (OutputStream os = urlConnection.getOutputStream()) {
+                    if (email.getText().toString().equals("wsr") && password.getText().toString().equals("wsr")) {
+                        byte[] out = "{\"email\":\"wsr\",\"password\":\"wsr\"}".getBytes(StandardCharsets.UTF_8);
+                        os.write(out);
+                    }
+
+                }
+                if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    InputStream inputStream = urlConnection.getInputStream();
+                    Scanner scanner = new Scanner(inputStream);
+                    scanner.useDelimiter("\\A");
+                    return scanner.next();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+return null;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        email = (EditText) findViewById(R.id.em);
+        password = (EditText) findViewById(R.id.pass);
+        String surl = "http://demo-wsr2.herokuapp.com/api/user/login";
+        URL url = null;
+        try {
+            url = new URL(surl);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        Button button = findViewById(R.id.button2);
+        URL finalUrl = url;
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new POST().execute(finalUrl);
+            }
+        });
     }
-    public void reg(View view){
-        Intent i = new Intent(getApplicationContext(), Registration.class);
-        startActivity(i);
-        finish();
-    }
-    public void SignIn(View view){
-        Intent i = new Intent(getApplicationContext(), home.class);
-        startActivity(i);
-        finish();
-    }
-
 }
